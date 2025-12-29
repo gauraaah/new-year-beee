@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.scene {
+  display: none;
+  text-align: center;
+}
+
+.scene.active {
+  display: block;
+}
