@@ -1,8 +1,14 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background: black;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
 }
 
 .scene {
@@ -16,4 +22,30 @@ body {
 
 .scene.active {
   display: flex;
+}
+
+.content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.tap {
+  font-size: 1rem;
+  opacity: 0.7;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.lyrics {
+  animation: floatUp 3s infinite alternate;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(10px); }
+  to { transform: translateY(-10px); }
 }
