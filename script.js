@@ -6,12 +6,10 @@ const music = document.getElementById("bgMusic");
 
 document.body.addEventListener("click", () => {
   if (currentScene === 1) {
-    // start music (required user interaction)
-    music.play().catch(() => {});
-
     scene1.classList.remove("active");
     scene2.classList.add("active");
 
+    music.play().catch(() => {});
     currentScene = 2;
   }
 });
