@@ -8,10 +8,13 @@ document.addEventListener("click", () => {
   if (started) return;
   started = true;
 
-  // Play music
-  music.play().catch(err => console.log(err));
+  music.muted = false;
+  music.volume = 1.0;
 
-  // Switch scenes
+  music.play()
+    .then(() => console.log("Music playing"))
+    .catch(err => console.log("Audio error:", err));
+
   scene1.classList.remove("active");
   scene2.classList.add("active");
 });
