@@ -1,15 +1,17 @@
-let currentScene = 1;
-
 const scene1 = document.getElementById("scene1");
 const scene2 = document.getElementById("scene2");
 const music = document.getElementById("bgMusic");
 
-document.body.addEventListener("click", () => {
-  if (currentScene === 1) {
-    scene1.classList.remove("active");
-    scene2.classList.add("active");
+let started = false;
 
-    music.play().catch(() => {});
-    currentScene = 2;
-  }
+document.addEventListener("click", () => {
+  if (started) return;
+  started = true;
+
+  // Play music
+  music.play().catch(err => console.log(err));
+
+  // Switch scenes
+  scene1.classList.remove("active");
+  scene2.classList.add("active");
 });
