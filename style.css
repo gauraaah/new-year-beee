@@ -49,3 +49,26 @@ body {
   from { transform: translateY(10px); }
   to { transform: translateY(-10px); }
 }
+.hero-img {
+  width: 220px;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease;
+}
+
+.comic {
+  font-size: 2rem;
+  font-weight: bold;
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
